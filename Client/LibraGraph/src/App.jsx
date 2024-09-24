@@ -6,10 +6,12 @@ import LibraBot from './components/LibraBot';
 
 function App() {
   return (
-    <div className="flex overflow-hidden flex-col pt-3.5 bg-black border border-solid border-slate-100 shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
+    <div className="flex flex-col min-h-screen bg-black text-slate-100">
       <Header />
-      <MainContent />
-      <ChatSection />
+      <div className="flex-grow">
+        <MainContent />
+        <ChatSection />
+      </div>
       <LibraBot />
     </div>
   );

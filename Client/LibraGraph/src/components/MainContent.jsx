@@ -1,22 +1,24 @@
 import React from 'react';
-import LibrarySection from './LibrarySection';
-import ProfileButton from './ProfileButton';
 
 const MainContent = () => {
   return (
-    <main className="flex flex-wrap gap-5 justify-between self-end mt-24 w-full max-w-[1918px] max-md:mt-10 max-md:max-w-full">
-      <section className="flex flex-col items-center self-start mt-9 max-md:max-w-full">
-        <h1 className="ml-4 text-6xl font-extrabold text-center text-slate-100 max-md:max-w-full max-md:text-4xl">
+    <main className="flex flex-col items-center text-center py-16 px-6 bg-no-repeat bg-cover bg-center relative">
+      <div className="max-w-[1400px] w-full mx-auto">
+        <h1 className="text-5xl font-bold text-white max-md:text-4xl mb-10 leading-snug">
           Meet our AI librarian for instant help...
         </h1>
-        <div className="self-stretch mt-24 max-md:mt-10 max-md:max-w-full">
-          <div className="flex gap-5 max-md:flex-col">
-            <LibrarySection title="Borrowed Books" />
-            <LibrarySection title="Issue Books" />
-          </div>
+        <div className="flex justify-center gap-8 mt-12 max-md:flex-col">
+          <button className="bg-neutral-900 text-2xl px-10 py-4 rounded-lg hover:bg-neutral-800">
+            Borrowed Books
+          </button>
+          <button className="bg-neutral-900 text-2xl px-10 py-4 rounded-lg hover:bg-neutral-800">
+            Issue Books
+          </button>
+          <button className="bg-neutral-900 text-2xl px-10 py-4 rounded-lg hover:bg-neutral-800">
+            My Profile
+          </button>
         </div>
-        <ProfileButton />
-      </section>
+      </div>
     </main>
   );
 };
