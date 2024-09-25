@@ -87,9 +87,15 @@ const App = () => {
       <Header />
       <div className="flex-grow">
         <MainContent />
+
         <BookSearch books={books} />
       </div>
       <ChatBot books={books} /> {/* Pass books data to ChatBot */}
+
+        <ChatSection />
+      </div>
+      <LibraBot />
+
     </div>
   );
 };
