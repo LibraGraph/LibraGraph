@@ -1,0 +1,18 @@
+.sign-in {
+    width: 150px;
+    height: 60px;
+    border: 3px solid #172a6e;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: rgb(0, 0, 0);
+    font-size: 1.2em;
+    font-weight: 550;
+  }
+  
+  .sign-in:hover {
+    background: #172a6e;
+    color: white;
+    font-size: 1.5em;
+  }
+  
