@@ -3,18 +3,12 @@ import Header from './components/Header';
 import MainContent from './components/MainContent';
 import ChatSection from './components/ChatSection';
 import LibraBot from './components/LibraBot';
-
 import ChatBot from './components/ChatBot';
 import BookSearch from './components/BookSearch';
 import UserProfiles from './components/UserProfiles'; // Import the UserProfiles component
 
 const App = () => {
   const [selectedBook, setSelectedBook] = useState(null);
-
-import ChatBot from './components/ChatBot'; // Adjusted import for ChatBot
-import BookSearch from './components/BookSearch'; // Importing BookSearch
-
-const App = () => {
 
   const books = [
     {
@@ -90,7 +84,6 @@ const App = () => {
     // Add more books as needed
   ];
 
-
   const users = [
     {
       id: 1,
@@ -126,28 +119,15 @@ const App = () => {
     setSelectedBook(book);
   };
 
-
   return (
     <div className="flex flex-col min-h-screen bg-black text-slate-100">
       <Header />
       <div className="flex-grow">
         <MainContent />
-
         <BookSearch books={books} onBookSelect={handleBookSelect} />
         <UserProfiles users={users} /> {/* Render UserProfiles and pass user data */}
       </div>
       <ChatBot selectedBook={selectedBook} users={users} /> {/* Pass users data to ChatBot */}
-
-
-        <BookSearch books={books} />
-      </div>
-      <ChatBot books={books} /> {/* Pass books data to ChatBot */}
-
-        <ChatSection />
-      </div>
-      <LibraBot />
-
-
     </div>
   );
 };
