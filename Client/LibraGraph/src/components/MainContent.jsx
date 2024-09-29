@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import BorrowedBooks from './BorrowedBooks';
 import IssueBook from './IssueBook';
 import UserProfiles from './UserProfiles';
+import InventoryManagement from './InventoryManagement';
 
-const MainContent = ({ books, users }) => {
+const MainContent = ({ books, users, onAddBook, onEditBook, onDeleteBook }) => {
   const [showBorrowedBooks, setShowBorrowedBooks] = useState(false);
   const [showIssueBook, setShowIssueBook] = useState(false);
   const [showUserProfiles, setShowUserProfiles] = useState(false);
+  const [showInventoryManagement, setShowInventoryManagement] = useState(false);
 
   const handleIssue = (book) => {
     console.log(`Issued book: ${book.title}`);
@@ -37,11 +39,26 @@ const MainContent = ({ books, users }) => {
           >
             User Profiles
           </button>
+          <button
+            className="bg-neutral-900 text-2xl px-10 py-4 rounded-lg hover:bg-neutral-800 transition-colors"
+            onClick={() => setShowInventoryManagement(!showInventoryManagement)}
+          >
+            Manage Inventory
+          </button>
         </div>
 
+        {/* Display components based on state */}
         {showBorrowedBooks && <BorrowedBooks />}
         {showIssueBook && <IssueBook books={books} onIssue={handleIssue} />}
-        {showUserProfiles && <UserProfiles users={users} />} {/* Pass users to UserProfiles */}
+        {showUserProfiles && <UserProfiles users={users} />}
+        {showInventoryManagement && (
+          <InventoryManagement
+            books={books}
+            onAddBook={onAddBook}
+            onEditBook={onEditBook}
+            onDeleteBook={onDeleteBook}
+          />
+        )}
       </div>
     </main>
   );
