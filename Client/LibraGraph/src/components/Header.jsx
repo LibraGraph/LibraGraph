@@ -44,11 +44,7 @@ const Header = () => {
           </SignedOut>
         )}
 
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/de60c8eef20a7dc398eecdf2a91aa4b245a026c922d047fe5f0d7bd5f5fa2d4c"
-          alt="User profile"
-          className="w-10 h-10 rounded-full"
-        />
+       
 
       </div>
     </header>
