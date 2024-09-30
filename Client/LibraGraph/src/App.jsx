@@ -81,23 +81,19 @@ const App = () => {
     // Add more books as needed
   ];
 
-
   return (
     <div className="flex flex-col min-h-screen bg-black text-slate-100">
       <Header />
       <div className="flex-grow">
         <MainContent />
-
         <BookSearch books={books} />
       </div>
       <ChatBot books={books} /> {/* Pass books data to ChatBot */}
-
-        <ChatSection />
-      </div>
+      <ChatSection />
       <LibraBot />
-
     </div>
   );
+  
 };
 
 export default App;
