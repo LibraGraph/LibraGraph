@@ -25,15 +25,15 @@ def fetch_all_nodes():
             nodes.append(record["n"])  # Extract node details
         return nodes
     
-    
 def fetch_nodes_by_label(label):
     query = f"MATCH (n:{label}) RETURN n"
     with driver.session() as session:
-        results = session./run(query)
+        results = session.run(query)  # Corrected this line
         nodes = []
         for record in results:
             nodes.append(record["n"])  # Extract node details
         return nodes
+
 
 @app.get("/get-all-data")
 async def get_all_data():
