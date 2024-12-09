@@ -4,9 +4,9 @@ import BorrowBook from './BorrowBook';
 import LibraryDashboard from './LibraryDashboard';
 import DigitalContent from './DigitalContent';
  import NaturalLanguageSearch from './NaturalLanguageSearch';
-import Chatbot from './SmartChatbot';
+ import Chatbot from './SmartChatbot';
 
-import VoiceCommands from './VoiceCommands';
+ import VoiceCommands from './VoiceCommands';
 
 const MainContent = () => {
   return (
@@ -28,12 +28,10 @@ const MainContent = () => {
          <section className="bg-gradient-to-r from-yellow-500 to-orange-600 p-8 rounded-lg shadow-lg">
           <NaturalLanguageSearch />
         </section>
-      
+        
         <section className="bg-gradient-to-r from-gray-700 to-gray-900 p-8 rounded-lg shadow-lg">
           <Chatbot />
         </section>
-          
-     
         
         <section className="bg-gradient-to-r from-teal-400 to-blue-500 p-8 rounded-lg shadow-lg">
           <VoiceCommands />
