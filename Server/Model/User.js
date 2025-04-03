@@ -5,9 +5,8 @@ const UserSchema = new mongoose.Schema({
   firstName: { type: String },
   lastName: { type: String },  
   externalId: { type: String, unique: true }, 
-  role: { type: String, default: "user" }
-}, {
-  timestamps: true
+  role: { type: String, default: "user" },
+  timestamps: true, 
  
 });
 
